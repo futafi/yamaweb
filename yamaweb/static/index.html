@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Yamamoto FPGA Converter</title>
+    <style>
+        label {
+            display: inline-block;
+            text-align: center;
+            width: 100px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+        }
+
+        input[type="numebr"]::-webkit-inner-spin-button,
+        input[type="numebr"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" enctype="multipart/form-data">
+        <p>
+            <label for="temperature">温度</label>
+            <input type="number" name="temperature" id="temperature" min="0" max="65535" value="255">
+        </p>
+        <p>
+            <label for="eta">更新係数</label>
+            <input type="number" name="eta" id="eta" step="0.0001" value="0.9995" max="1" min="0">
+        </p>
+        <p>
+            <label for="test0">TEST0</label>
+            <input type="number" name="test0" id="test0" min="0" max="65535" value="0">
+        </p>
+        <p>
+            <label for="test1">TEST1</label>
+            <input type="number" name="test1" id="test1" min="0" max="65535" value="0">
+        </p>
+        <p>
+            <label for="test2">TEST2</label>
+            <input type="number" name="test2" id="test2" min="0" max="65535" value="0">
+        </p>
+        <p>
+            <label for="test3">TEST3</label>
+            <input type="number" name="test3" id="test3" min="0" max="65535" value="0">
+        </p>
+        <p>
+            <label for="result">RESULT</label>
+            <input type="number" name="result" id="result" min="0" max="255" value="0">
+        </p>
+	  <p>
+	  .xlsx、 .csv、 .tsv対応
+	  </p>
+        <p>
+            <label for="jij">相互作用</label>
+            <input type="file" name="jij" id="jij">
+        </p>
+        <p>
+            <label for="hi">外場</label>
+            <input type="file" name="hi" id="hi">
+        </p>
+        <p>
+            <label></label>
+            <input type="submit">
+        </p>
+    </form>
+</body>
+
+</html>
